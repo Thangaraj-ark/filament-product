@@ -2,8 +2,10 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Resources\ProductImageResource\RelationManagers\ProductsRelationManager;
 use App\Filament\Resources\ProductResource\Pages;
 use App\Filament\Resources\ProductResource\RelationManagers;
+use App\Filament\Resources\ProductResource\RelationManagers\ProductimagesRelationManager;
 use App\Models\Product;
 use Filament\Forms;
 use Filament\Forms\Components\Textarea;
@@ -62,7 +64,7 @@ class ProductResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            ProductimagesRelationManager::class
         ];
     }
 
