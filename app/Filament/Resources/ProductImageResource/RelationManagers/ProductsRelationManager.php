@@ -20,7 +20,8 @@ class ProductsRelationManager extends RelationManager
             ->schema([
                 Forms\Components\TextInput::make('image')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->maxSize(5000),
             ]);
     }
 
